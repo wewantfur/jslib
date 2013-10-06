@@ -1,13 +1,11 @@
 .fur-divider {
 	width: 100%;
 	height: 100%;
-	position:relative;
-	border: 1px solid red;
+	position:absolute;
 	overflow: hidden;
 }
 .fur-divider > span {
 	position: absolute;
-/* 	float: left; */
 	height: 100%;
 	width: 10px;
 	margin-left: 2px;
