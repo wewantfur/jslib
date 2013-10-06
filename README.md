@@ -1,0 +1,4 @@
+jslib
+=====
+
+Fur Javascript Library
