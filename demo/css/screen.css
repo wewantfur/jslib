@@ -9,3 +9,26 @@
 .offsettest {
 	margin: 20px;
 }
+
+.fur-thumb {
+    border: 1px solid transparent;
+}
+
+.fur-thumb-active {
+    border: 1px solid red;
+}
+.fur-slider {
+    width: 600px;
+    margin: 10px auto;
+}
+
+.fur-slider-items {
+    list-style-type: none;
+    width: 260px;
+    float: right;
+}
+
+.fur-slider-items li {
+    float: left;
+    margin: 0 10px 10px 0;
+}

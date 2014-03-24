@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <link rel="stylesheet" href="../../src/slider/fur-slider.css" />
+    <link rel="stylesheet" href="../css/screen.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+</head>
+<body>
+	<div>
+		<div class="fur-slider">
+            <ul class="fur-slider-items">
+                <li><img src="img/thumbs/0.jpg" data-src="img/0.jpg" /></li>
+                <li><img src="img/thumbs/1.jpg" data-src="img/1.jpg" /></li>
+                <li><img src="img/thumbs/2.jpg" data-src="img/2.jpg" /></li>
+                <li><img src="img/thumbs/3.jpg" data-src="img/3.jpg" /></li>
+                <li><img src="img/thumbs/4.jpg" data-src="img/4.jpg" /></li>
+                <li><img src="img/thumbs/5.jpg" data-src="img/5.jpg" /></li>
+                <li><img src="img/thumbs/6.jpg" data-src="img/6.jpg" /></li>
+                <li><img src="img/thumbs/7.jpg" data-src="img/7.jpg" /></li>
+                <li><img src="img/thumbs/8.jpg" data-src="img/8.jpg" /></li>
+                <li><img src="img/thumbs/9.jpg" data-src="img/9.jpg" /></li>
+            </ul>
+            <div class="fur-slider-viewport"></div>
+
+
+        </div>
+	</div>
+
+    <button onclick="stopSlider()">STOP</button>
+
+
+
+    <script src="../../src/slider/fur-slider.js"></script>
+    <script>
+        window.onload = function(e) {
+            if(document.querySelectorAll)
+                furSlider(document.querySelector(".fur-slider"), {speed: 2500});
+
+        }
+
+        function stopSlider() {
+            furSlider(document.querySelector(".fur-slider"), 'stop');
+        }
+
+
+    </script>
+</body>
+</html>
