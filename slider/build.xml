@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Compress Javascript and CSS Files" basedir="public_html" default="buildSlider">
+
+    <property name="version" value="2.3.5" />
+    <property name="closurePath" value="/usr/share/closure-compiler/compiler.jar" />
+    <property name="yuicompressorPath" value="/usr/share/yui-compressor/yuicompressor-2.4.8.jar" />
+
+    <target name="buildSlider">
+
+        <antcall target="compressJs" />
+        <antcall target="compressCss" />
+        <antcall target="generateLatestFiles" />
+        <echo>Done!</echo>
+    </target>
+
+    <target name="minifycss" description="Minify CSS">
+        <java jar="${yuicompressorPath}" fork="true">
+            <arg value="-o" />
+            <arg value="${fileout}" />
+            <arg value="${file}" />
+        </java>
+
+    </target>
+
+    <target name="minify" description="Minify Javascript">
+        <java jar="${closurePath}" fork="true">
+            <arg value="--js" />
+            <arg value="${file}" />
+            <arg value="--js_output_file" />
+            <arg value="${fileout}" />
+            <arg value="--language_in" />
+            <arg value="ECMASCRIPT5" />
+            <arg value="--language_out" />
+            <arg value="ECMASCRIPT5" />
+        </java>
+
+    </target>
+
+    <target name="compressJs">
+        <antcall target="minify">
+            <param name="file" value="fur-slider/fur-slider.js" />
+            <param name="fileout" value="fur-slider/fur-slider-${sliderVersion}-min.js" />
+        </antcall>
+
+
+    <target name="compressCss">
+        <antcall target="minifycss">
+            <param name="file" value="fur-slider/fur-slider.css" />
+            <param name="fileout" value="fur-slider/fur-slider-${sliderVersion}-min.css" />
+        </antcall>
+
+    </target>
+
+    <target name="generateLatestFiles" depends="compressCss,concatSliderJs">
+        <copy file="fur-slider/fur-slider-${sliderVersion}-min.js" tofile="fur-slider/fur-slider-latest.js" overwrite="true" />
+        <copy file="fur-slider/fur-slider.js" tofile="fur-slider/fur-slider-latest.js" overwrite="true" />
+        <copy file="fur-slider/fur-slider.js" tofile="fur-slider/fur-slider-${sliderVersion}.js" overwrite="true" />
+
+        <copy file="fur-slider/fur-slider.css" tofile="fur-slider/fur-slider-latest.css" overwrite="true" />
+        <copy file="fur-slider/fur-slider-${sliderVersion}-min.css" tofile="fur-slider/fur-slider-latest-min.css" overwrite="true" />
+        <copy file="fur-slider/fur-slider-${sliderVersion}-min.js" tofile="fur-slider/fur-slider-latest-min.js" overwrite="true" />
+
+    </target>
+</project>
