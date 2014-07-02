@@ -2,6 +2,23 @@
 FurSlider is a vanilla javascript image slider. It uses no jQuery-like libraries. Transitions are achieved with CSS3 effects.
 
 ## Usage
+
+### Javascript:
+```html
+<link rel="stylesheet" href="http://cdn.wewantfur.com/fur-slider/fur-slider-min.css">
+<script src="http://cdn.wewantfur.com/fur-polyfill/fur-polyfill-min.js"></script>
+<script src="http://cdn.wewantfur.com/fur-slider/fur-slider-min.js"></script>
+<script>
+window.onload = function(e) {
+    fur.slider(document.getElementById('photo'), {speed: 3000});
+}
+</script>
+```
+
+Notes:
+* The polyfill is required and provides IE8 support
+* The slider accepts a single element or a nodeList
+
 ### HTML:
 ```html
 <section id="photo">
@@ -38,19 +55,3 @@ Available effects:
 * `fur-slider-slide-fade`
 * `fur-slider-slide-horizontal`
 * `fur-slider-slide-vertical`
-
-### Javascript:
-```html
-<link rel="stylesheet" href="http://cdn.wewantfur.com/fur-slider/fur-slider-min.css">
-<script src="http://cdn.wewantfur.com/fur-polyfill/fur-polyfill-min.js"></script>
-<script src="http://cdn.wewantfur.com/fur-slider/fur-slider-min.js"></script>
-<script>
-window.onload = function(e) {
-    fur.slider(document.getElementById('photo'), {speed: 3000});
-}
-</script>
-```
-
-Notes:
-* The polyfill is required and provides IE8 support
-* The slider accepts a single element or a nodeList
