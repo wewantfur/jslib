@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fur Slider Example</title>
+    <link rel="stylesheet" href="http://cdn.wewantfur.com/basicfur/css/basicfur-v3-min.css">
+    <link rel="stylesheet" href="../fur-slider.css">
+
+    <style>
+        .example .fur-slider-viewport {
+            width: 600px;
+            height: 338px;
+        }
+
+    </style>
+
+</head>
+<body class="example">
+    <h1>Fur Slider Example</h1>
+
+    <div class="clearfix">
+        <h2>Fade</h2>
+        <section id="slider-1">
+
+            <div class="fur-slider-viewport fur-slider-fade">
+                <img src="images/image1.jpg" alt="Image 1"/>
+            </div>
+
+            <aside>
+                <ul class="fur-slider-items">
+                    <li><a href="#slide1"><img src="images/thumb/image1.jpg" data-src="images/image1.jpg" data-url="http://google.com" alt="Image 1"></a></li>
+                    <li><a href="#slide2"><img src="images/thumb/image2.jpg" data-src="images/image2.jpg" alt="Image 2"></a></li>
+                    <li><a href="#slide3"><img src="images/thumb/image3.jpg" data-src="images/image3.jpg" alt="Image 3"></a></li>
+                    <li><a href="#slide4"><img src="images/thumb/image4.jpg" data-src="images/image4.jpg" alt="Image 4"></a></li>
+                    <li><a href="#slide5"><img src="images/thumb/image5.jpg" data-src="images/image5.jpg" alt="Image 5"></a></li>
+                </ul>
+            </aside>
+        </section>
+    </div>
+
+    <div class="clearfix">
+        <h2>Slide From Left</h2>
+        <section id="slider-2">
+
+            <div class="fur-slider-viewport fur-slider-slide-left">
+                <img src="images/image1.jpg" alt="Image 1"/>
+            </div>
+
+            <aside>
+                <ul class="fur-slider-items">
+                    <li><img src="images/thumb/image1.jpg" data-src="images/image1.jpg" alt="Image 1"></li>
+                    <li><img src="images/thumb/image2.jpg" data-src="images/image2.jpg" alt="Image 2"></li>
+                    <li><img src="images/thumb/image3.jpg" data-src="images/image3.jpg" alt="Image 3"></li>
+                    <li><img src="images/thumb/image4.jpg" data-src="images/image4.jpg" alt="Image 4"></li>
+                    <li><img src="images/thumb/image5.jpg" data-src="images/image5.jpg" alt="Image 5"></li>
+                </ul>
+            </aside>
+        </section>
+    </div>
+
+    <div class="clearfix">
+
+        <h2>Slide From Right</h2>
+        <section id="slider-3">
+
+            <div class="fur-slider-viewport fur-slider-slide-right">
+                <img src="images/image1.jpg" alt="Image 1"/>
+            </div>
+
+            <aside>
+                <ul class="fur-slider-items">
+                    <li><img src="images/thumb/image1.jpg" data-src="images/image1.jpg" alt="Image 1"></li>
+                    <li><img src="images/thumb/image2.jpg" data-src="images/image2.jpg" alt="Image 2"></li>
+                    <li><img src="images/thumb/image3.jpg" data-src="images/image3.jpg" alt="Image 3"></li>
+                    <li><img src="images/thumb/image4.jpg" data-src="images/image4.jpg" alt="Image 4"></li>
+                    <li><img src="images/thumb/image5.jpg" data-src="images/image5.jpg" alt="Image 5"></li>
+                </ul>
+            </aside>
+        </section>
+    </div>
+
+    <div class="clearfix">
+
+        <h2>Slide From Top</h2>
+        <section id="slider-4">
+
+            <div class="fur-slider-viewport fur-slider-slide-top">
+                <img src="images/image1.jpg" alt="Image 1"/>
+            </div>
+
+            <aside>
+                <ul class="fur-slider-items">
+                    <li><img src="images/thumb/image1.jpg" data-src="images/image1.jpg" alt="Image 1"></li>
+                    <li><img src="images/thumb/image2.jpg" data-src="images/image2.jpg" alt="Image 2"></li>
+                    <li><img src="images/thumb/image3.jpg" data-src="images/image3.jpg" alt="Image 3"></li>
+                    <li><img src="images/thumb/image4.jpg" data-src="images/image4.jpg" alt="Image 4"></li>
+                    <li><img src="images/thumb/image5.jpg" data-src="images/image5.jpg" alt="Image 5"></li>
+                </ul>
+            </aside>
+        </section>
+    </div>
+
+    <div class="clearfix">
+
+        <h2>Slide From Bottom</h2>
+        <section id="slider-5">
+
+            <div class="fur-slider-viewport fur-slider-slide-bottom">
+                <img src="images/image1.jpg" alt="Image 1"/>
+            </div>
+
+            <aside>
+                <ul class="fur-slider-items">
+                    <li><img src="images/thumb/image1.jpg" data-src="images/image1.jpg" alt="Image 1"></li>
+                    <li><img src="images/thumb/image2.jpg" data-src="images/image2.jpg" alt="Image 2"></li>
+                    <li><img src="images/thumb/image3.jpg" data-src="images/image3.jpg" alt="Image 3"></li>
+                    <li><img src="images/thumb/image4.jpg" data-src="images/image4.jpg" alt="Image 4"></li>
+                    <li><img src="images/thumb/image5.jpg" data-src="images/image5.jpg" alt="Image 5"></li>
+                </ul>
+            </aside>
+        </section>
+    </div>
+
+    <script src="../../fur-polyfill/fur-polyfill.js"></script>
+    <script src="../fur-slider.js"></script>
+    <script>
+        window.onload = function() {
+            fur.slider(document.getElementsByTagName('section'), {speed: 2000});
+        }
+    </script>
+</body>
+</html>
