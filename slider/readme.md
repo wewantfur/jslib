@@ -5,9 +5,9 @@ FurSlider is a vanilla javascript image slider. It uses no jQuery-like libraries
 
 ### Javascript:
 ```html
-<link rel="stylesheet" href="http://cdn.wewantfur.com/fur-slider/fur-slider-min.css">
-<script src="http://cdn.wewantfur.com/fur-polyfill/fur-polyfill-min.js"></script>
-<script src="http://cdn.wewantfur.com/fur-slider/fur-slider-min.js"></script>
+<link rel="stylesheet" href="http://cdn.wewantfur.com/fur-slider/fur-slider-latest-min.css">
+<script src="http://cdn.wewantfur.com/fur-polyfill/fur-polyfill-latest-min.js"></script>
+<script src="http://cdn.wewantfur.com/fur-slider/fur-slider-latest-min.js"></script>
 <script>
 window.onload = function(e) {
     fur.slider(document.getElementById('photo'), {speed: 3000});
