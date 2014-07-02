@@ -1,12 +1,12 @@
 # FurSlider: Vanilla Javascript image slider
-FurSlider is a vanilla javascript image slider. It uses no jQuery-like libraries
+FurSlider is a vanilla javascript image slider. It uses no jQuery-like libraries. Transitions are achieved with CSS3 effects.
 
 ## Usage
 ### HTML:
-```groovy
+```html
 <section id="photo">
 	<div class="fur-slider-viewport">
-		<img src="/files/slider/1.jpg" alt="Image 1"/><!-- Placeholder image -->
+		<img src="/files/slider/1.jpg" alt="Image 1"/>
 	</div>
 	<aside>
 	    <!-- thumbnails -->
@@ -23,12 +23,25 @@ FurSlider is a vanilla javascript image slider. It uses no jQuery-like libraries
 
 Notes:
 * The container must have an element with the class `fur-slider-viewport`
+* Inside the viewport, an optional placeholder image can be provided
 * The container must have a list with the class `fur-slider-items` which contains the items
 * The items can be any type of element, the `data-src` property contains the image used in the slide
 * An optional `data-url` property can be provided, which will wrap the slides with an `a` tag linking to the url
 
+####Slide Effects
+The slider comes with a number of build in effects. A slide affect is added as class to the viewport.
+Available effects:
+* `fur-slider-slide-left`
+* `fur-slider-slide-right`
+* `fur-slider-slide-top`
+* `fur-slider-slide-bottom`
+* `fur-slider-slide-fade`
+* `fur-slider-slide-horizontal`
+* `fur-slider-slide-vertical`
+
 ### Javascript:
-```groovy
+```html
+<link rel="stylesheet" href="http://cdn.wewantfur.com/fur-slider/fur-slider-min.css">
 <script src="http://cdn.wewantfur.com/fur-polyfill/fur-polyfill-min.js"></script>
 <script src="http://cdn.wewantfur.com/fur-slider/fur-slider-min.js"></script>
 <script>
@@ -38,3 +51,6 @@ window.onload = function(e) {
 </script>
 ```
 
+Notes:
+* The polyfill is required and provides IE8 support
+* The slider accepts a single element or a nodeList
